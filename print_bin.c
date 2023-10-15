@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * print_binary - print number in binary
+ * print_bin - print number in binary
  * @n: number to print
  * Return: no. of characters printed
  */

@@ -19,4 +19,6 @@ void print_int(int num)
 		print_int(num / 10);
 
 	print_chr('0' + (c % 10));
+
+return (num);
 }
