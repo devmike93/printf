@@ -4,9 +4,11 @@
 #include <stdarg.h>
 #include <unistd.h>
 
+/*function prototypes*/
 int _printf(const char *fmt, ...);
-int test_flags(const char fmt, va_list list);
-int print_string(char *string);
+int get_conv(const char fmt, va_list list);
+int print_str(char *fmt);
+int print_chr(int fmt);
 int print_bin(unsigned int n);
 
 #endif

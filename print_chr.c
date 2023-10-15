@@ -4,11 +4,11 @@
 /**
  * print_chr - prints a single character to
  * standard output using write
- * @chr: character to print
- * Return: total no. of char printed
+ * @fmt: character to print
+ * Return: total no. of char printed to stdo
  */
 
-int print_chr(int chr)
+int print_chr(int fmt)
 {
-	return (write(1, &chr, 1));
+	return (write(1, &fmt, 1));
 }

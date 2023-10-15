@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * print_bin - print number in binary
+ * print_bin - recursively prints number in binary
  * @n: number to print
  * Return: no. of characters printed
  */
@@ -11,9 +11,7 @@
 int print_bin(unsigned int n)
 {
 	int binary;
-	int count = 0;
-	int binaryNum[32];
-	int i = 0;
+	int total = 0;
 
 	if (n == 0)
 	{
@@ -23,13 +21,9 @@ int print_bin(unsigned int n)
 
 	while (n >= 1)
 	{
-		binaryNum[i] = n % 2;
-		n = n / 2;
-		i++;
-
-		count = binaryNum[i];
+		total = print_bin(n / 2);
 	}
 
-	binary = (count + print_chr(n % 2) + '0');
+	binary = (total + print_chr(n % 2) + '0');
 	return (binary);
 }

@@ -6,28 +6,22 @@
  * _printf - print any type of variable
  * @fmt: is a character string
  * Return: the number of characters printed
- */
+ **/
 
 int _printf(const char *fmt, ...)
 {
+	int total = 0;
 	va_list list;
 
-	int total = 0;
 
 	va_start(list, fmt);
 	while (*fmt != '\0')
 	{
-		switch (*fmt)
+		if (*fmt == '%' && *(fmt + 1) != NULL)
+			total += get_conv(fmt, list);
+		else
 		{
-		case '%':
-			if (*(fmt + 1) != '\0')
-			{
-				total += test_flags(*(++fmt), list);
-			}
-		break;
-		default:
 			total += print_chr(*fmt);
-		break;
 		}
 		++fmt;
 	}
