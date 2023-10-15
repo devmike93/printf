@@ -4,26 +4,26 @@
 
 /**
  * _printf - print any type of variable
- * @fmt: is a character string
+ * @format: is a character string
  * Return: the number of characters printed
  **/
 
-int _printf(const char *fmt, ...)
+int _printf(const char *format, ...)
 {
 	int total = 0;
 	va_list list;
 
 
-	va_start(list, fmt);
-	while (*fmt != '\0')
+	va_start(list, format);
+	while (*format != '\0')
 	{
-		if (*fmt == '%' && *(fmt + 1) != NULL)
-			total += get_conv(fmt, list);
+		if (*format == '%' && *(format + 1) != NULL)
+			total += get_conv(format, list);
 		else
 		{
-			total += print_chr(*fmt);
+			total += print_chr(*format);
 		}
-		++fmt;
+		++format;
 	}
 	va_end(list);
 	return (total);
