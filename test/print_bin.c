@@ -1,14 +1,12 @@
 #include "main.h"
 
-#include "main.h"
-
 /**
  * print_binary - print number in binary
  * @n: number to print
  * Return: no. of characters printed
  */
 
-int print_bin(unsigned int n)
+int print_bin(list, unsigned int n)
 {
 	int binary;
 	int count = 0;

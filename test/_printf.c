@@ -1,6 +1,5 @@
 #include "main.h"
-#include <unistd.h>
-#include <stdarg.h>
+
 /**
  * test_flags - chooses which conversion function to use
  * according to the formatmt
@@ -14,38 +13,12 @@ int test_flags(const char fmt, va_list list)
 
 	switch (fmt)
 	{
-	case 'c':
-		total = print_chr((char)va_arg(list, int));
-		break;
-	case 's':
-		total = print_string(va_arg(list, char *));
-		break;
-	case '%':
-		total += print_chr(fmt);
-		break;
-	case 'd':
-	case 'i':
-		total += print_int((long)va_arg(list, int));
-		break;
-	case 'x':
-	case 'X':
-		total += print_hex(va_arg(list, int), fmt);
-		break;
-	case 'u':
-		total += print_uint(va_arg(list, unsigned int));
-		break;
-	case 'o':
-		total += print_octal(va_arg(list, unsigned int));
-		break;
-	case 'p':
-		total += print_add(va_arg(list, void *));
-		break;
 	case 'b':
 		total += print_bin(va_arg(list, unsigned int));
 		break;
 	default:
-		total += print_chr('%');
-		total += print_chr(fmt);
+		total += print_bin('%');
+		total += print_bin(fmt);
 		break;
 }
 
@@ -76,7 +49,7 @@ int _printf(const char *fmt, ...)
 			}
 		break;
 		default:
-			total += print_chr(*fmt);
+			total += print_bin(*fmt);
 		break;
 		}
 		++fmt;
