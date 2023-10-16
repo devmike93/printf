@@ -20,5 +20,10 @@ int print_dec(long int num)
 		return ((total + print_dec(num % 10)));
 	}
 	else
+	{
 		return (print_chr(num + '0'));
+	}
+
+	return 0;
 }
+
