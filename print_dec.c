@@ -16,7 +16,7 @@ int print_dec(long int num)
 	}
 	else if (num > 9)
 	{
-		total = print_dec(n / 10);
+		total = print_dec(num / 10);
 		return ((total + print_dec(num % 10)));
 	}
 	else
