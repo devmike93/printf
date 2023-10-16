@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- * _printf - print any type of variable
- * @format: is a character string
- * Return: the number of characters printed
- **/
-
+ * _printf - Print any type of variable
+ * @format: A character string containing format specifiers
+ * 
+ * Return: The number of characters printed.
+ */
 int _printf(const char *format, ...)
 {
 	int total = 0;
 	va_list list;
 
 	if (format == NULL)
-		return -1;
+		return (-1);
 
 	va_start(list, format);
 
@@ -54,10 +54,9 @@ int _printf(const char *format, ...)
 		}
 
 		format++;
-
 	}
 
 	va_end(list);
 
-	return total;
+	return (total);
 }
