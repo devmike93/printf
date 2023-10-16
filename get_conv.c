@@ -22,7 +22,7 @@ int get_conv(const char *fmt, va_list list)
 			total = print_str(va_arg(list, char *));
 			break;
 		case '%':
-			total += print_chr(fmt);
+			total += print_chr(*fmt);
 			break;
 		case 'd':
 		case 'i':
