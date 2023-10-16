@@ -7,7 +7,7 @@
  * @list: list of arguments
  * Return: number of charachters printed
  */
-int get_conv(const char *fmt, va_list list)
+int get_conv(const char fmt, va_list list)
 {
 	int total = 0;
 
@@ -19,7 +19,7 @@ int get_conv(const char *fmt, va_list list)
 			total = print_chr((char)va_arg(list, int));
 			break;
 		case 's':
-			total = print_string(va_arg(list, char *));
+			total = print_str(va_arg(list, char *));
 			break;
 		case '%':
 			total += print_chr(*fmt);
