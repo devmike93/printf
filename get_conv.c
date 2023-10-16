@@ -7,7 +7,7 @@
  * @list: list of arguments
  * Return: number of charachters printed
  */
-int get_conv(const char fmt, va_list list)
+int get_conv(const char *fmt, va_list list)
 {
 	int total = 0;
 
