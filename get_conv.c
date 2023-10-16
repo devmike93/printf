@@ -33,7 +33,7 @@ int get_conv(const char *fmt, va_list list)
 			break;
 		default:
 			total += print_chr('%');
-			total += print_chr(fmt);
+			total += print_chr(*fmt);
 			break;
 		}
 	}
