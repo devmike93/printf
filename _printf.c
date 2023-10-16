@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	while (*format != '\0')
 	{
-		if (*format == '%' && *(format + 1) != NULL)
+		if (*format == '%' && *(format + 1) != '\0')
 			total += get_conv(format, list);
 		else
 		{
