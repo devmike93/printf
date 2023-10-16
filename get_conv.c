@@ -13,7 +13,7 @@ int get_conv(const char *fmt, va_list list)
 
 	if (fmt != NULL)
 	{
-		switch (fmt)
+		switch (*fmt)
 		{
 		case 'c':
 			total = print_chr((char)va_arg(list, int));
