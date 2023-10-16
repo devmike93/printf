@@ -26,7 +26,7 @@ int get_conv(const char *fmt, va_list list)
 			break;
 		case 'd':
 		case 'i':
-			total += print_int((long)va_arg(list, int));
+			total += print_bin((long)va_arg(list, int));
 			break;
 		case 'b':
 			total += print_bin(va_arg(list, unsigned int));
