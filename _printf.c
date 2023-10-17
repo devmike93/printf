@@ -4,7 +4,7 @@
  * _printf - Print any type of variable
  * @format: A character string containing format specifiers
  * 
- * Return: The number of characters printed.
+ * Return: The number of characters printed.Returns -1 on error.
  */
 int _printf(const char *format, ...)
 {
@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	va_list list;
 
 	if (format == NULL)
-		return (-1);
+		return -1;
 
 	va_start(list, format);
 
