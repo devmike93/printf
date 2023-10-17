@@ -22,11 +22,11 @@ int get_conv(const char *fmt, va_list list)
 			total = print_str(va_arg(list, char *));
 			break;
 		case '%':
-			total += print_chr(*fmt);
+			total += print_chr('%');
 			break;
 		case 'd':
 		case 'i':
-			total += print_bin((long)va_arg(list, int));
+			total += print_int(va_arg(list, int));
 			break;
 		case 'b':
 			total += print_bin(va_arg(list, unsigned int));
