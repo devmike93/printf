@@ -37,6 +37,10 @@ int get_conv(const char *fmt, va_list list)
 		case 'o':
 			total += print_oct(va_arg(list, unsigned int));
 			break;
+		case 'x':
+		case 'X':
+			total += print_hexadec(va_arg(list, int), *fmt);
+			break;
 		default:
 			total += print_chr('%');
 			total += print_chr(*fmt);

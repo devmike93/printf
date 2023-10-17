@@ -15,5 +15,6 @@ int print_bin(unsigned int n);
 int print_int(long int n);
 int print_unsigned(unsigned int num);
 int print_oct(unsigned int num);
+int print_hexadec(unsigned int num, char fmt);
 
 #endif
