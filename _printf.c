@@ -10,15 +10,15 @@
 
 int _printf(const char *format, ...)
 {
-	int total = 0;
 	va_list list;
+	int total = 0;
 
 
 	va_start(list, format);
 	while (*format != '\0')
 	{
 		if (*format == '%' && *(format + 1) != '\0')
-			total += get_conv(format, list);
+			total += get_conv((++format), list);
 		else
 		{
 			total += print_chr(*format);
