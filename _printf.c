@@ -52,6 +52,13 @@ int _printf(const char *format, ...)
 				write(1, str, str_len);
 				total += str_len;
 			}
+
+			else
+			{
+				write(1, "%", 1);
+				write(1, format, 1);
+				total += 2;
+			}
 		}
 
 		format++;
