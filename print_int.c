@@ -17,7 +17,7 @@ int print_int(long int n)
 	}
 
 	if (n < 10)
-		return (print_char(n + '0'));
+		return (print_chr(n + '0'));
 	else
 	{
 		count = print_int(n / 10);
