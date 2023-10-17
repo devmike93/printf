@@ -29,7 +29,7 @@ int get_conv(const char *fmt, va_list list)
 			total += print_bin((long)va_arg(list, int));
 			break;
 		case 'b':
-			total += print_bin(va_arg(list, unsigned int));
+			total += print_dec(va_arg(list, unsigned int));
 			break;
 		default:
 			total += print_chr('%');
