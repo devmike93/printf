@@ -1,7 +1,5 @@
 #include "main.h"
 
-#include "main.h"
-
 /**
  * print_bin - recursively prints number in binary
  * @n: number to print
