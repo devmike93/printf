@@ -52,7 +52,14 @@ int _printf(const char *format, ...)
 				write(1, str, str_len);
 				total += str_len;
 			}
-
+			else if (*format == 'd' || *format == 'i')
+			{
+				int num = va_arg(list, int);
+				char num_str[12];
+				int len = snprintf(num_str, sizeof(num_str), "%d", num);
+				write(1, num_str, len);
+				total += len;
+			}
 			else
 			{
 				write(1, "%", 1);
