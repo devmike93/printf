@@ -1,4 +1,4 @@
-## 0x11. C - printf
+# 0x11. C - printf
 
 A collaboration project involving almost everything we have learnt in c so far.
 
