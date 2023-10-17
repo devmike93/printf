@@ -24,6 +24,6 @@ int print_dec(long int num)
 		return (print_chr(num + '0'));
 	}
 
-	return 0;
+	return (0);
 }
 
