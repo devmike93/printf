@@ -47,3 +47,6 @@ Managing a lot of files and finding a good workflow
 
 15. *: Checking all the functions are working well
 
+# Authors:
+
+Collins Mlamba and Michael Megbenu

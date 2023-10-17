@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * get_conv - chooses which conversion function to use
  * according to the formatmt
@@ -32,7 +31,7 @@ int get_conv(const char *fmt, va_list list)
 			total += print_bin(va_arg(list, unsigned int));
 			break;
 		case 'u':
-			total += print_unsigned(va_arg(list, unsigned int));
+			total += print_unsigned(va_arg(list, int));
 			break;
 		case 'o':
 			total += print_oct(va_arg(list, unsigned int));
@@ -40,6 +39,9 @@ int get_conv(const char *fmt, va_list list)
 		case 'x':
 		case 'X':
 			total += print_hexadec(va_arg(list, int), *fmt);
+			break;
+		case 'p':
+			total += print_addr(va_arg(list, void *));
 			break;
 		default:
 			total += print_chr('%');
