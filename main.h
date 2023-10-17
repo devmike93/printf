@@ -13,5 +13,6 @@ int print_chr(int fmt);
 int print_dec(long int num);
 int print_bin(unsigned int n);
 int print_int(long int n);
+int print_unsigned(unsigned int num);
 
 #endif
