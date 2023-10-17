@@ -13,15 +13,27 @@ int _printf(const char *format, ...)
 	va_list list;
 	int total = 0;
 
+	char current_char;
+	char next_char;
 
 	va_start(list, format);
-	while (*format != '\0')
+	while (1)
 	{
-		if (*format == '%' && *(format + 1) != '\0')
+		current_char = *format;
+		next_char = *(format + 1);
+
+		if (current_char == '\0')
+		{
+			break;
+		}
+
+		if (current_char == '%' && next_char != '\0')
+		{
 			total += get_conv((++format), list);
+		}
 		else
 		{
-			total += print_chr(*format);
+			total += print_chr(current_char);
 		}
 		++format;
 	}
